@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <p>New animal goes here</p>
+
+<form action="#" th:action="@{/animals/new}" th:object="${animal}" method="post">
+    <input type="hidden" th:field="*{id}" />
+    <div>
+        <label>Name</label>
+        <input th:field="*{name}" type="text" />
+    </div>
+    <button type="submit">Save</button>
+</form>
+<hr>
+<a th:href="@{/animals}">Back to animals</a>
+</body>
+</html>

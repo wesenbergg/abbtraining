@@ -1,0 +1,16 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Animal</title>
+</head>
+<body>
+<h1>You discovered animal named: </h1>
+<p th:text="${animal.name}"></p>
+<a th:href="@{/animals}">Back to animals</a>
+<hr>
+<p>or</p>
+<hr>
+<a th:href="@{/animals/delete(id=${animal.id})}">Kill the animal</a>
+</body>
+</html>

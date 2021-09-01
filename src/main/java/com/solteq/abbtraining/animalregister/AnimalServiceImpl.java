@@ -26,4 +26,14 @@ private final AnimalRepository animalRepository;
     public Integer saveAnimal(Animal animal) {
         return animalRepository.saveAnimal(animal);
     }
+
+    @Override
+    public Animal updateAnimal(Animal animal, Integer id) {
+        return animalRepository.updateAnimal(animal, id);
+    }
+
+    @Override
+    public Animal deleteAnimal(Integer id) {
+        return animalRepository.deleteAnimal(id);
+    }
 }
